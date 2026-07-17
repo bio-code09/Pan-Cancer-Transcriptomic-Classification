@@ -1,0 +1,50 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 500 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     pancan_weka_ready-weka.filters.unsupervised.attribute.Remove-V-R7965,18382,17110,5408,6594,18747,8350,6817,5578,5577,7993,7897,12569,7966,15898,17905,11394,7422,6837,8004,3542,16373,12978,11125,2779,16343,7793,9178,17907,629,11911,6585,17802,16450,11260,10842,2640,4225,11551,8777,6831,204,15804,2130,7933,952,5633,18336,7955,12996,9185,9653,8014,6595,149,18811,15474,8005,18754,15913,90,6877,2319,3541,16339,8003,17586,776,17739,3922,19607,10291,5753,18217,15901,1510,224,5658,18291,5989,2168,2074,743,12079,5022,8006,1059,6927,19160,2775,13162,3731,1859,18637,14428,17317,3473,3462,5626,13508,20532
+Instances:    801
+Attributes:   101
+              [list of attributes omitted]
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 500 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 1.56 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         799               99.7503 %
+Incorrectly Classified Instances         2                0.2497 %
+Kappa statistic                          0.9967
+Mean absolute error                      0.017 
+Root mean squared error                  0.0502
+Relative absolute error                  5.6054 %
+Root relative squared error             12.8963 %
+Total Number of Instances              801     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     PRAD
+                 0.993    0.002    0.993      0.993    0.993      0.991    1.000     1.000     LUAD
+                 0.997    0.002    0.997      0.997    0.997      0.995    1.000     1.000     BRCA
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     KIRC
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     COAD
+Weighted Avg.    0.998    0.001    0.998      0.998    0.998      0.996    1.000     1.000     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   <-- classified as
+ 136   0   0   0   0 |   a = PRAD
+   0 140   1   0   0 |   b = LUAD
+   0   1 299   0   0 |   c = BRCA
+   0   0   0 146   0 |   d = KIRC
+   0   0   0   0  78 |   e = COAD
+
